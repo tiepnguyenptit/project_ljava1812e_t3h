@@ -64,15 +64,4 @@ public class Category {
     public void setCreatedDate(Date createdDate) {
         this.createdDate = createdDate;
     }
-
-    @Override
-    public String toString() {
-        return "Category{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", shortDesc='" + shortDesc + '\'' +
-                ", createdDate=" + createdDate +
-                ", listProducts=" + listProducts +
-                '}';
-    }
 }

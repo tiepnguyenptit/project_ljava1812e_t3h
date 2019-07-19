@@ -1,6 +1,6 @@
 package application.data.model;
 
-import  javax.persistence.*;
+import javax.persistence.*;
 import java.util.Date;
 
 @Entity(name = "dbo_product_image")
