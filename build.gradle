@@ -54,6 +54,12 @@ dependencies {
 
     // https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-log4j2
     compile group: 'org.springframework.boot', name: 'spring-boot-starter-log4j2', version: '1.5.7.RELEASE'
+
+    // https://mvnrepository.com/artifact/org.webjars/bootstrap
+    compile group: 'org.webjars', name: 'bootstrap', version: '4.2.1'
+
+    // https://mvnrepository.com/artifact/org.webjars/jquery
+    compile group: 'org.webjars', name: 'jquery', version: '2.1.4'
     
 }
 
