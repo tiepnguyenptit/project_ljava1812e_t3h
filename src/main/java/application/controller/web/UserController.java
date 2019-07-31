@@ -75,7 +75,7 @@ public class UserController extends BaseController {
     @PostMapping("/update")
     public String updateUser(@Valid @ModelAttribute("user") User user) {
         try {
-            String  username = SecurityContextHolder.getContext().getAuthentication().getName();
+            String username = SecurityContextHolder.getContext().getAuthentication().getName();
 
             User userEntity = userService.findUserByUsername(username);
 
