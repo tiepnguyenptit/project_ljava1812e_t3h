@@ -11,6 +11,7 @@ import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import javax.transaction.Transactional;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -25,6 +26,7 @@ public class CategoryApiController {
    @Autowired
    private CategoryService categoryService;
 
+   @Transactional
    @GetMapping("/fake")
     public BaseApiResult fakeCategory(){
       BaseApiResult result = new BaseApiResult();

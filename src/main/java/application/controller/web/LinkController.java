@@ -30,7 +30,7 @@ public class LinkController {
             type = MediaType.IMAGE_PNG;
         } else if (filename.toLowerCase().endsWith("jpg") || filename.toLowerCase().endsWith("jpeg")) {
             type = MediaType.IMAGE_JPEG;
-        } else if (filename.toLowerCase().endsWith("gif")) {
+        } else {
             type = MediaType.IMAGE_GIF;
         }
 

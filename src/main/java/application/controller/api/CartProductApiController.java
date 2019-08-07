@@ -37,7 +37,7 @@ public class CartProductApiController {
             if(dto.getGuid() != null && dto.getAmount() > 0 && dto.getProductId() > 0) {
                 Cart cartEntity = cartService.findFirstCartByGuid(dto.getGuid());
                 Product productEntity = productService.findOne(dto.getProductId());
-                if(cartEntity != null && productEntity != null) {
+                if(cartEntity != null && productEntity != null)  {
                     CartProduct cartProductEntity = cartProductService.findFirstCartProductByCartIdAndProductId(cartEntity.getId(),productEntity.getId());
                     if(cartProductEntity != null) {
                         cartProductEntity.setAmount(cartProductEntity.getAmount() + dto.getAmount());
