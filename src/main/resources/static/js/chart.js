@@ -4,6 +4,15 @@ $(function() {
    * Data and config for chartjs
    */
   'use strict';
+
+  var dataChart = [];
+  var labelChart = [];
+
+  for(var i=0;i<vm.chartDataVMS.length;i++) {
+    dataChart.push(vm.chartDataVMS[i].value);
+    labelChart.push(vm.chartDataVMS[i].label);
+  }
+
   var data = {
     labels: ["2013", "2014", "2014", "2015", "2016", "2017"],
     datasets: [{
@@ -79,8 +88,9 @@ $(function() {
 
   };
   var doughnutPieData = {
+
     datasets: [{
-      data: [30, 40, 30],
+      data: dataChart,
       backgroundColor: [
         'rgba(255, 99, 132, 0.5)',
         'rgba(54, 162, 235, 0.5)',
@@ -100,11 +110,7 @@ $(function() {
     }],
 
     // These labels appear in the legend and in the tooltips when hovering different arcs
-    labels: [
-      'Pink',
-      'Blue',
-      'Yellow',
-    ]
+    labels: labelChart
   };
   var doughnutPieOptions = {
     responsive: true,
@@ -306,6 +312,7 @@ $(function() {
   }
 
   if ($("#doughnutChart").length) {
+
     var doughnutChartCanvas = $("#doughnutChart").get(0).getContext("2d");
     var doughnutChart = new Chart(doughnutChartCanvas, {
       type: 'doughnut',

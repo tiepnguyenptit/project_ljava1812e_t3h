@@ -100,7 +100,7 @@ public class CategoryApiController {
       return result;
    }
 
-   @PostMapping("/update/{categoryId}")
+   @PostMapping("/update/{categoryId}p")
    public BaseApiResult updateCategory(@PathVariable int categoryId, @RequestBody CategoryDTO dto){
       BaseApiResult result = new BaseApiResult();
 
